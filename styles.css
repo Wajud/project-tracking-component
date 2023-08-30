@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+div.background{
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(31, 30, 30, 0.08);
+    border-radius: 0 0 0 30px;
+    z-index: -1;
+
+}
+
+div.hamburgers{
+    display:none;
+    cursor: pointer;
+}
+
+/**Utilities**/
+
+.my-2{
+    margin: 2rem 0 1rem;
+}
+
+.my-3{
+    margin: 3rem 0;
+}
+.btn{
+    padding: 12px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    width: 400px;
+}
+
+.grey{
+    color:  #ccc;
+}
+
+.dark-grey{
+   color:  hsl(230, 11%, 40%);
+}
+
+
+header{
+    display: flex; 
+    width: 80%;
+    margin: 3rem auto;
+}
+
+
+div.logo-wrap{
+    width: 40%;
+}
+
+nav{
+    width :60%;
+    justify-self: flex-end;
+    transform: translateX(15%);
+
+}
+
+nav.mobile{
+    display: none;
+}
+
+
+ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+}
+
+li span a{
+    color: #ccc;
+
+}
+
+
+
+a:hover{
+    text-decoration: underline;
+}
+
+span a:hover{
+    text-decoration: none;
+}
+
+li.dot{
+
+    transform: translateY(-5px);
+    font-weight: 700;
+    color: #ccc;
+}
+main{
+
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    gap: 40px;
+}
+
+main div{
+    width: 70%;
+    margin-top: 3rem;
+ 
+}
+
+
+main > img{
+    order: 1;
+    position: relative;
+    right: 10%;
+}
+
+p span{
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 15px;
+
+ 
+}
+
+p{
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+
+h1{
+    line-height: 1.4;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+.btn-container{
+    display: flex;
+    margin-top: 4rem;
+}
+
+.btn-colored{
+    background-color: rgb(228, 101, 62);
+    color: #fff;
+}
+
+.btn-colored:hover{
+    background-color: rgba(228, 101, 62,0.8); 
+}
+
+
+.btn-light{
+
+    color: #ccc;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    background-color: #fff;
+}
+
+@media (max-width: 900px){
+    /* body{
+        display: none;
+    } */
+
+    header div.logo-wrap{
+        transform: translateX(10%);
+    }
+
+    div.hamburgers{
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 10%;
+      
+
+    }
+
+    nav.desktop{
+        display:none;
+    }
+
+    nav.mobile{
+        width: 80%;
+        box-shadow: 0 0 10px rgba(31, 30, 30, 0.08);
+        background-color: #fff;
+        padding: 20px;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        display: none;
+        
+    }
+
+
+    nav.mobile ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav.mobile li{
+        padding: 15px;
+        text-align: center;
+        letter-spacing: 1.5px;
+    }
+
+    nav.mobile li.line{
+        padding: 0 20px;
+        width: 90%;
+        margin: 10px auto;
+        background-color: #ccc;
+    }
+
+
+    .line{
+        width: 30px;
+        height: 1px;
+        background-color: rgb(26, 25, 25,0.5);
+    }
+
+    .top{
+        transform: translateY(-5px);
+    }
+
+    .bottom{
+        transform: translateY(5px);
+    }
+
+    .hide{
+        height: 0;
+        visibility: none;
+    }
+
+    .show{
+        visibility: visible;
+        height: 100%;
+    }
+
+    main{
+        flex-direction: column;
+    
+    }
+
+    main img{
+        order: 1;
+        transform: translateY(-30px) translateX(10%);
+        
+   
+    }
+
+    main div{
+        order: 2;
+        width: 90%;
+        transform: translateX(10%);
+    
+      
+       
+    }
+
+    div.background{
+        height: 500px;
+    }
+
+    .btn-container{
+        transform: translateX(0%)
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    header div.logo-wrap{
+        margin-left: 0%;
+    }
+    .btn-container{
+        flex-direction: column;
+    }
+    
+    .btn-container *{
+        width: 90%;
+        margin: auto auto;
+    }
+    .btn-container *:last-child{
+        margin-top: 10px;
+    }
+}
